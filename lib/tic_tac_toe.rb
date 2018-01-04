@@ -105,8 +105,8 @@ def play
     turn(board)
   elsif won?(board)
     winner = winner(board)
-    puts "Congratulations #{winner}"
+    prints "Congratulations #{winner}"
   else
-    puts "It has been a draw!"
+    prints "Cat's Game"
   end
 end
