@@ -63,3 +63,13 @@ end
 def current_player(board)
   turn_count(board).even? ? "X" : "O"
 end
+
+def won?(board)
+  WIN_COMBINATIONS.each do |win_array|
+    if board[win_array[0]] == "X" && board[win_array[1]] == "X" && board[win_array[2]] == "X" ||
+      board[win_array[0]] == "O" && board[win_array[1]] == "O" && board[win_array[2]] == "O"
+      return win_array
+    end
+  end
+  false
+end
