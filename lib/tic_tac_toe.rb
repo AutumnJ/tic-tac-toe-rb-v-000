@@ -105,8 +105,8 @@ def play(board)
     turn(board)
   elsif won?(board)
     winner = winner(board)
-    print "Congratulations #{winner}"
-  else
-    print "Cat's Game"
+    puts "Congratulations #{winner}!"
+  elsif draw?(board)
+    puts "Cat's Game!"
   end
 end
