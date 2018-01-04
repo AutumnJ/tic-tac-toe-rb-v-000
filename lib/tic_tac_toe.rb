@@ -77,3 +77,25 @@ end
 def full?(board)
   board.all? {|index| index == "X" || index == "O" }
 end
+
+def draw?(board)
+  if full?(board) == true && won?(board) == false
+    return true
+  else
+    return false
+  end
+end
+
+def over?(board)
+  # if any of the below are true, will return true. Else returns false by default
+  won?(board) || draw?(board) || full?(board)
+end
+
+def winner(board)
+  if won?(board)
+    win_array = won?(board)
+    board[win_array[0]]
+  else
+    nil
+  end
+end
