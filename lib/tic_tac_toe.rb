@@ -106,7 +106,7 @@ def play
   elsif won?(board)
     winner = winner(board)
     puts "Congratulations #{winner}"
-  else 
-    puts "It has been a draw!"  
+  else
+    puts "It has been a draw!"
   end
 end
