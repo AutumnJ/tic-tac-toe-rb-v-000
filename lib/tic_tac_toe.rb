@@ -109,4 +109,5 @@ def play(board)
     prints "Congratulations #{winner}"
   else
     prints "Cat's Game"
+  end
 end
