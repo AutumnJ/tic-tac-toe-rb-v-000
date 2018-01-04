@@ -21,7 +21,7 @@ def input_to_index(input)
   input.to_i - 1
 end
 
-def move(board, index, current_player = "X")
+def move(board, index, current_player)
   board[index] = current_player
 end
 
@@ -58,4 +58,8 @@ def turn_count(board)
     end
   end
   return counter
+end
+
+def current_player(board)
+  turn_count(board).even? ? "X" : "O"
 end
