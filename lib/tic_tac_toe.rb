@@ -31,7 +31,7 @@ end
 
 def valid_move?(board, index)
   if position_taken?(board, index) == true || index < 0 || index > 8
-    puts "Can't move there. Please try again."
+    #puts "Can't move there. Please try again."
     return false
   else
     return true
