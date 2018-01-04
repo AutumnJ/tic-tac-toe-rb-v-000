@@ -106,8 +106,8 @@ def play(board)
   end
   if won?(board)
     winner = winner(board)
-    prints "Congratulations #{winner}"
+    print "Congratulations #{winner}"
   else
-    prints "Cat's Game"
+    print "Cat's Game"
   end
 end
