@@ -28,3 +28,24 @@ end
 def position_taken?(board, index)
   return !(board[index] == " " || board[index] == "" || board[index] == nil)
 end
+
+def valid_move?(board, index)
+  if position_taken?(board, index) == true || index < 0 || index > 8
+    puts "Can't move there. Please try again."
+    return false
+  else
+    return true
+  end
+end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, index, current_player)
+    display_board(board)
+  else
+    turn(board)
+  end
+end
