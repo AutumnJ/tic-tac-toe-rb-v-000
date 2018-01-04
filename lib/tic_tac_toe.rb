@@ -99,3 +99,14 @@ def winner(board)
     nil
   end
 end
+
+def play
+  if !over?(board)
+    turn(board)
+  elsif won?(board)
+    winner = winner(board)
+    puts "Congratulations #{winner}"
+  else 
+    puts "It has been a draw!"  
+  end
+end
